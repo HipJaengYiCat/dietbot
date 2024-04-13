@@ -1,0 +1,41 @@
+
+"": {
+    "type": "",
+    "content": {
+      "title": "",
+      "summary": [
+        {
+          "quote": "" 
+          "author": "",
+          "text": ""
+        }
+      ],
+      "detail": [
+        {
+          "head": "",
+          "body": [
+          ]
+        },
+        {
+          "head": "",
+          "body": [
+          ]
+        },
+        {
+          "head": "",
+          "body": [
+          ]
+        }
+      ],
+      "people": [
+        { "name": , "imageUrl": "" },
+        { "name": , "imageUrl": "" },
+        { "name": , "imageUrl": "" },
+        { "name": , "imageUrl": "" },
+        { "name": , "imageUrl": "" },
+        { "name": , "imageUrl": "" },
+        { "name": , "imageUrl": "" }, 
+        { "name": , "imageUrl": "" }
+      ]
+    }
+  },

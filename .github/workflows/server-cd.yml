@@ -1,0 +1,31 @@
+name: Node.js Server CD
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/master.key
+          chmod 600 ~/.ssh/master.key
+          cat >>~/.ssh/config <<END
+          Host master
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/master.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ${{ secrets.GCP_USERNAME }}
+          SSH_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.GCP_HOST }}
+
+      - name: Run Build
+        run: ssh master 'cd ~/kakao-chatbot-TTbot && git checkout master && sh pull.sh && pm2 restart www'
