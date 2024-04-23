@@ -34,6 +34,7 @@ username@vmname:~/project_folder$ npm start
 
 ## 구조
 - bin
+   - www : 서버를 실행하는 스크립트, http모듈에 express 모듈 연결하고, 프로젝트 실행되는 포트 지정함
 - data
 - public
 - routes
@@ -42,10 +43,10 @@ username@vmname:~/project_folder$ npm start
         - responses.js
         - userManager.js
         - util.js
-    - api.js
-    - index.js
-    - result.js
-    - users.js
+    - api.js : 챗봇과 관련된 API 라이터 설정, 챗봇의 사용자 상호작용을 통해 수집된 데이터를 기반으로 사용자 유형과 결과 분석하는 로직 포함함
+    - index.js : 라우팅 처리, 웹의 홈페이지 경로를 설정함
+    - result.js : result 경로의 요청을 처리
+    - users.js : 사용자 목록을 제공하는 경로의 요청 처리
 - views
 - app.js
 - pakage-lock.json
