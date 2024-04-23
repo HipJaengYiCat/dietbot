@@ -33,6 +33,26 @@ username@vmname:~/project_folder$ npm start
 ```
 
 ## 구조
+- bin
+- data
+- public
+- routes
+    - chat
+        - blocks.js
+        - responses.js
+        - userManager.js
+        - util.js
+    - api.js
+    - index.js
+    - result.js
+    - users.js
+- views
+- app.js
+- pakage-lock.json
+- package.json
+- pull.sh
+- utiles.js
+
 
 ### public
 
