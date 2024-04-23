@@ -19,4 +19,9 @@ app.use("/", indexRouter);
 app.use("/result", resultRouter);
 app.use("/api", apiRouter);
 
+//서버 실행
+app.listen(3000, () => {
+    console.log('start express server');
+});
+
 module.exports = app;
